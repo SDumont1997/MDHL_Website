@@ -1,0 +1,106 @@
+<html>
+  <head>
+    <title>Feedback Sent</title>
+    <link rel="stylesheet" href="style/mdhl_responsive.css">
+    <link rel="shortcut icon" href="../assets/favicon.ico" />
+  </head>
+  <body>
+    <header>
+      <h1>Mighty Ducks Hockey League</h1>
+      <img id="mdhl_logo" src="assets/logo_mdhl.png" alt="mdhl_logo" />
+
+      <input type="checkbox" id="nav_toggle">
+      <label for="nav_toggle">
+        <span id="toggle_open">&equiv;</span>
+        <span id="toggle_close">&times;</span>
+      </label>
+
+      <nav>
+        <a href="#">Home</a>
+        <a href="about.html">About</a>
+        <a href="schedule.html">Schedule</a>
+        <a href="rules.html">Rules</a>
+        <a href="contact.html">Contact</a>
+        <a href="registration.html">Registration</a>
+      </nav>
+    </header>
+    <main>
+      <div id="table_show_data">
+      <p>&nbsp;</p>
+      <h2>
+        <font size="+1"
+          >The following information has been sent as your feedback:</font
+        >
+      </h2>
+
+        <table >
+          <tr>
+            <th>Form Field</th>
+            <th>Field Value</th>
+          </tr>
+          
+          <script language="javascript">
+          var args = location.search.substr(1).split("&");
+          for (var i = 0; i < args.length; ++i) {
+            var parts = args[i].split("=");
+            if (parts != null) {
+              var field = parts[0];
+              var value = parts[1];
+              if (value == null) {
+                value = "null";
+              } else {
+                value = '"' + unescape(value.replace(/\+/g, " ")) + '"';
+              }
+
+              document.writeln('<tr><td>' + field + "</td>");
+              document.writeln('<td>' + value + "</td></tr>");
+            }
+          }
+        </script>
+
+<noscript>
+  <tr>
+    <td>
+      <p>You need to turn on Javascript in your browser.</p>
+      
+      <p>In Microsoft Internet Explorer 4 or greater:</p>
+      <ul>
+        <li>
+          From the "Tools" menu (in IE 4, it's the "View" menu), select
+          "Internet Options".
+        </li>
+        <li>Click on the "Security" tab.</li>
+        <li>
+          Click on the "Custom Level" button. (In IE 4, select "Custom"
+          and then click on "Settings...".)
+        </li>
+        <li>
+          Under "Active scripting" make sure "Enable" is selected.
+        </li>
+      </ul>
+      
+      <p>In Netscape version 4 or greater:</p>
+      <ul>
+        <li>From the <b>Edit</b> menu, select <b>Preferences</b>.</li>
+        <li>
+          In the <b>Category</b> list on the left, click on the word
+          "Advanced".
+        </li>
+        <li>
+          In the panel on the right, make sure "Enable JavaScript" is
+          checked.
+        </li>
+        <li>Click the <b>OK</b> button.</li>
+      </ul>
+    </td>
+  </tr>
+</noscript>
+</table>
+</div>
+</main>
+
+<footer>
+  <p>&copy; Mighty Ducks Hockey League - 2021</p>
+</footer>
+</body>
+</html>

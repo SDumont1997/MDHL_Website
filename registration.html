@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MDHL Registration</title>
+    <link rel="stylesheet" href="style/mdhl_responsive.css" />
+    <link rel="shortcut icon" href="./assets/favicon.ico" />
+  </head>
+  <body>
+    <header>
+      <h1>Mighty Ducks Hockey League</h1>
+      <img id="mdhl_logo" src="assets/logo_mdhl.png" alt="mdhl_logo" />
+
+      <input type="checkbox" id="nav_toggle">
+      <label for="nav_toggle">
+        <span id="toggle_open">&equiv;</span>
+        <span id="toggle_close">&times;</span>
+      </label>
+
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="schedule.html">Schedule</a>
+        <a href="rules.html">Rules</a>
+        <a href="contact.html">Contact</a>
+        <a href="#">Registration</a>
+      </nav>
+    </header>
+
+    <main>
+      <h2>Registration Form</h2>
+      <form action="show_data.html" method="GET">
+        <div class="form_flex_container">
+          <label for="first_name" class="visually_hidden">First Name:</label>
+          <input
+            type="text"
+            id="first_name"
+            class="form_text_input"
+            name="first_name"
+            placeholder="First Name"
+            required
+          />
+          <label for="last_name" class="visually_hidden">Last Name:</label>
+          <input
+            type="text"
+            id="last_name"
+            class="form_text_input"
+            name="last_name"
+            placeholder="Last Name"
+            required
+          />
+        </div>
+        <div class="form_flex_container">
+          <input
+            type="text"
+            class="form_text_input"
+            name="address"
+            placeholder="Street Address"
+            required
+          />
+        </div>
+        <div class="form_flex_container">
+          <label for="city" class="visually_hidden">City:</label>
+          <input
+            type="text"
+            id="city"
+            class="form_text_input"
+            name="city"
+            placeholder="City"
+            required
+          />
+          <label for="zip_code" class="visually_hidden">Zip Code:</label>
+          <input
+            type="text"
+            id="zip_code"
+            class="form_text_input"
+            name="zip_code"
+            placeholder="Zip Code"
+            required
+          />
+        </div>
+        <label for="birth_date" class="visually_hidden">Birth Date:</label>
+        <input
+          type="text"
+          id="birth_date"
+          class="form_text_input"
+          name="birth_date"
+          placeholder="Birth Date (mm/dd/yyyy)"
+          required
+        />
+        <div id="gender_container">
+          <p>Gender:</p>
+          <label class="custom_radio">
+            <input
+              type="radio"
+              class="custom_radio_input visually_hidden"
+              name="gender"
+              value="female"
+              required
+            />
+            <span class="custom_radio_indicator"></span>
+            Female
+          </label>
+          <label class="custom_radio">
+            <input
+              type="radio"
+              class="custom_radio_input visually_hidden"
+              name="gender"
+              value="male"
+              required
+            />
+            <span class="custom_radio_indicator"></span>
+            Male
+          </label>
+        </div>
+
+        <div id="grade_container">
+          <p>Grade:</p>
+          <label class="custom_radio">
+            <input
+              type="radio"
+              class="custom_radio_input visually_hidden"
+              name="grade"
+              value="preSchool"
+              required
+            />
+            <span class="custom_radio_indicator"></span>
+            Pre-School
+          </label>
+          <label class="custom_radio">
+            <input
+              type="radio"
+              class="custom_radio_input visually_hidden"
+              name="grade"
+              value="firstGrade"
+              required
+            />
+            <span class="custom_radio_indicator"></span>
+            1st
+          </label>
+          <label class="custom_radio">
+            <input
+              type="radio"
+              class="custom_radio_input visually_hidden"
+              name="grade"
+              value="secondGrade"
+              required
+            />
+            <span class="custom_radio_indicator"></span>
+            2nd
+          </label>
+          <label class="custom_radio">
+            <input
+              type="radio"
+              class="custom_radio_input visually_hidden"
+              name="grade"
+              value="thirdGrade"
+              required
+            />
+            <span class="custom_radio_indicator"></span>
+            3rd
+          </label>
+          <label class="custom_radio">
+            <input
+              type="radio"
+              class="custom_radio_input visually_hidden"
+              name="grade"
+              value="fourthGrade"
+              required
+            />
+            <span class="custom_radio_indicator"></span>
+            4th
+          </label>
+          <label class="custom_radio">
+            <input
+              type="radio"
+              class="custom_radio_input visually_hidden"
+              name="grade"
+              value="fifthGrade"
+              required
+            />
+            <span class="custom_radio_indicator"></span>
+            5th
+          </label>
+        </div>
+
+        <h3 id="which_school">Which elementary school do you live near?</h3>
+        <div class="custom_select">
+          <label for="school" class="visually_hidden">Closest School:</label>
+          <select id="school" name="school">
+            <option value="null">Select Closest School:</option>
+            <option value="aJKatzenmaier">AJ Katzenmaier</option>
+            <option value="marjoriePHart">Marjorie P Hart</option>
+            <option value="greenbay">Greenbay</option>
+            <option value="northElementary">North Elementary</option>
+            <option value="howardAYeager">Howard A Yeager</option>
+            <option value="southElementary">South Elementary</option>
+          </select>
+        </div>
+
+        <h3>What position(s) do you normally play? (check all that apply)</h3>
+        <div id="positions">
+          <label class="custom_checkbox">
+            <input
+              type="checkbox"
+              class="custom_checkbox_input visually_hidden"
+              name="position"
+              value="forward"
+            />
+            <span class="custom_checkbox_indicator"></span>
+            Forward
+          </label>
+          <label class="custom_checkbox" id="midfielder">
+            <input
+              type="checkbox"
+              class="custom_checkbox_input visually_hidden"
+              name="position"
+              value="midfield"
+            />
+            <span class="custom_checkbox_indicator"></span>
+            Midfield
+          </label>
+          <label class="custom_checkbox">
+            <input
+              type="checkbox"
+              class="custom_checkbox_input visually_hidden"
+              name="position"
+              value="defense"
+            />
+            <span class="custom_checkbox_indicator"></span>
+            Defense
+          </label>
+          <label class="custom_checkbox">
+            <input
+              type="checkbox"
+              class="custom_checkbox_input visually_hidden"
+              name="position"
+              value="goalkeeper"
+            />
+            <span class="custom_checkbox_indicator"></span>
+            Goalkeeper
+          </label>
+        </div>
+
+        <h3>Uniform Size:</h3>
+        <div id="size_container">
+            <label class="custom_radio">
+              <input
+                type="radio"
+                class="custom_radio_input visually_hidden"
+                name="size"
+                value="youthSmall"
+                required
+              />
+              <span class="custom_radio_indicator"></span>
+              Youth Small
+            </label>
+            <label class="custom_radio">
+              <input
+                type="radio"
+                class="custom_radio_input visually_hidden"
+                name="size"
+                value="youthMedium"
+                required
+              />
+              <span class="custom_radio_indicator"></span>
+              Youth Medium
+            </label>
+            <label class="custom_radio">
+              <input
+                type="radio"
+                class="custom_radio_input visually_hidden"
+                name="size"
+                value="youthLarge"
+                required
+              />
+              <span class="custom_radio_indicator"></span>
+              Youth Large
+            </label>
+            <label class="custom_radio">
+              <input
+                type="radio"
+                class="custom_radio_input visually_hidden"
+                name="size"
+                value="small"
+                required
+              />
+              <span class="custom_radio_indicator"></span>
+              Small
+            </label>
+            <label class="custom_radio">
+              <input
+                type="radio"
+                class="custom_radio_input visually_hidden"
+                name="size"
+                value="medium"
+                required
+              />
+              <span class="custom_radio_indicator"></span>
+              Medium
+            </label>
+            <label class="custom_radio">
+              <input
+                type="radio"
+                class="custom_radio_input visually_hidden"
+                name="size"
+                value="large"
+                required
+              />
+              <span class="custom_radio_indicator"></span>
+              Large
+            </label>
+            <label class="custom_radio">
+              <input
+                type="radio"
+                class="custom_radio_input visually_hidden"
+                name="size"
+                value="extraLarge"
+                required
+              />
+              <span class="custom_radio_indicator"></span>
+              Extra-Large
+            </label>
+        </div>
+
+        <h3>Permission to Play</h3>
+        <p>
+          I, the parent or guardian of the minor registrant, agree that the
+          registrant and I will abide by all the rules of the Mighty Ducks
+          Hockey League (MDHL). In recognizing the possibility of physical
+          injury associated with hockey and in consideration for the "League"
+          accepting the registrant for its hockey programs and activities, I
+          hereby release, discharge, and/or otherwise indemnify MDHL, their
+          employees and associated personnel and volunteers, including the
+          facilities used for practices and games, against any claim by or on
+          behalf of the registrant as a result of the registrant's participation
+          in the program and/or being transported to or from MDHL sponsored
+          activities. <br />
+          By signing below, I hereby agree and authorize the above. In addition,
+          by entering your name below, I also acknowledge that I have read the
+          cancellation policy and agree to its terms.
+        </p>
+        <div>
+          <label for="parent_signature" class="visually_hidden">Parent/Guardian Signature:</label>
+          <input
+            type="text"
+            id="parent_signature"
+            class="form_text_input"
+            name="parent_signature"
+            placeholder="Parent/Guardian Signature"
+            required
+          />
+        </div>
+        <div>
+          <label for="current_date" class="visually_hidden">Current Date:</label>
+          <input
+            type="text"
+            id="current_date"
+            class="form_text_input"
+            name="current_date"
+            placeholder="Current Date (mm/dd/yyyy)"
+            required
+          />
+        </div>
+        <input type="submit" id="submit" value="Submit Registration Form" />
+      </form>
+    </main>
+
+    <footer>
+      <p>&copy; Mighty Ducks Hockey League - 2021</p>
+    </footer>
+  </body>
+</html>
